@@ -1,0 +1,11 @@
+# Optional Blueprint — you can also configure everything in Render Dashboard
+services:
+  - type: web
+    name: aura-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot/main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
